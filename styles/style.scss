@@ -80,6 +80,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        margin-bottom: 190px;
 
         .image {
             width: 850px;
@@ -90,41 +91,149 @@
             top: 0;
         }
 
-        .content {
+        .card {
             width: 50%;
             padding: 0 80px;
             box-sizing: border-box;
             position: relative;
 
-            h1 {
-                font-weight: 500;
-                font-size: 16px;
+            .head {
                 color: white;
-                margin-bottom: 12px;
             }
 
             .subhead {
-                font-weight: bold;
-                font-size: 40px;
                 color: white;
-                margin-bottom: 40px;
             }
 
             .buy {
-                display: flex;
-                align-items: center;
-                margin-bottom: 12px;
 
                 .price {
-                    font-weight: normal;
-                    font-size: 40px;
-                    margin-right: 35px;
                     color: #F2F2F2;
                 }
             }
         }
     }
 
+    .content {
+        padding: 0 70px;
+        margin-bottom: 90px;
+
+        .product-card {
+            display: flex;
+            justify-content: space-between;
+
+            .card-txt {
+                max-width: 480px;
+                color: #2B2835;
+                padding: 50px 20px;
+
+                h2 {
+                    margin-bottom: 7px;
+                }
+
+                .subhead {
+                    font-size: 50px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .slider {
+                flex-grow: 1;
+                max-width: 750px;
+                position: relative;
+                .slide {
+                    width: 100%;
+                    height: 100%;
+                    background: url(../images/slide1.png) no-repeat center center / contain;
+                }
+                .points {
+                    position: absolute;
+                    bottom: -20px;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    display: flex;
+                    justify-content: center;
+
+                    .point {
+                        width: 10px;
+                        height: 10px;
+                        background: #D1D1D1;
+                        border-radius: 50%;
+                        margin: 0 7px;
+                    }
+
+                    .active {
+                        background: black;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.color-pick {
+    margin-bottom: 45px;
+    p {
+        &:nth-child(1) {
+            font-size: 40px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        &:nth-child(2) {
+            font-weight: normal;
+            margin-bottom: 14px;
+        }
+
+    }
+
+    .pallete {
+        display: flex;
+
+        .clr-wrap {
+            border-radius: 50%;
+            margin-right: 10px;
+            width: 46px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            .clr {
+                width: 37px;
+                height: 37px;
+                border: 1px solid #EAEAEA;
+                box-sizing: border-box;
+                border-radius: 50%;
+                box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.135817);
+            }
+
+            &:nth-child(1) {
+                .clr {
+                    background-color: white;
+                }
+            }
+
+            &:nth-child(2) {
+                .clr {
+                    background-color: #DD5656;
+                }
+            }
+
+            &:nth-child(3) {
+                .clr {
+                    background-color: black;
+                }
+            }
+        }
+
+        .active {
+            border: 1px solid black;
+        }
+    }
 }
 
 
@@ -156,19 +265,44 @@
     color: white;
 }
 
+.head {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.subhead {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 40px;
+    position: relative;
+
+    span {
+        position: absolute;
+        top: -50%;
+        font-size: 40px;
+        font-weight: normal;
+    }
+}
+
 .buy {
     display: flex;
     align-items: center;
+    margin-bottom: 12px;
 
     .price {
         font-weight: normal;
         font-size: 40px;
         margin-right: 35px;
+
     }
 }
 
 .info {
     font-weight: 500;
     font-size: 13px;
+}
+
+.yellow-text {
     color: #FFC700;
 }
